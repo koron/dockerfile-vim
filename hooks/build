@@ -1,0 +1,6 @@
+#!/bin/bash
+
+printenv
+
+docker build --build-arg "VIM_VERSION=${SOURCE_BRANCH}" -t ${IMAGE_NAME} .
+docker build --build-arg "VIM_VERSION=${SOURCE_BRANCH}" --build-arg "VIM_ENABLE_ALL=" -t ${IMAGE_NAME}-slim .

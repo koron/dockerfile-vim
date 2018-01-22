@@ -60,7 +60,7 @@ RUN vim -es \
         -c q
 
 
-FROM busybox
+FROM alpine:3.7
 
 WORKDIR /root
 

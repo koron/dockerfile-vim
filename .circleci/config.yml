@@ -3,11 +3,9 @@ version: 2
 jobs:
   build:
 
-    docker:
-      - image: debian:stretch
+    machine: true
 
     steps:
       - checkout
-      - setup_remote_docker
       - run: docker build -t vim8 .
       - run: docker image list
